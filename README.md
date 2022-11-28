@@ -41,7 +41,7 @@ The main problem of the first version is the precision of the polygons. As the p
 
 | image | 200 generations | 1000 generations | 2000 generations | 3000 generations | 4000 generations | 5000 generations |
 | --- | --- | --- | --- | --- | --- | --- |
-| <img src="img/logo/logo.png" width="200"/> | <img src="img/logo/res2-200.png" width="200"/> | <img src="img/logo/res2-1000.png" width="200"/> |<img src="img/logo/res2-2000.png" width="200"/> | <img src="img/logo/res2-3000.png" width="200"/> | <img src="img/logo/res2-4000.png" width="200"/> | <img src="img/logo/res2-5000.png" width="200"/> |
+| <img src="img/logo/logo.png"/> | <img src="img/logo/res2-200.png" width="200"/> | <img src="img/logo/res2-1000.png" width="200"/> |<img src="img/logo/res2-2000.png" width="200"/> | <img src="img/logo/res2-3000.png" width="200"/> | <img src="img/logo/res2-4000.png" width="200"/> | <img src="img/logo/res2-5000.png" width="200"/> |
 
 In comparison with the first version:
 | First version | Second version |
