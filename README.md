@@ -48,4 +48,9 @@ In comparison with the first version:
 | --- | --- |
 | <img src="img/logo/logo-1000.png" width="200"/> | <img src="img/logo/res2-1000.png" width="200"/> |
 
+And for the result on 5000 generations:
+| Objectif | Result |
+| --- | --- |
+| <img src="img/logo/logo.png" width="200"/> | <img src="img/logo/res2-5000.png" width="200"/> |
+
 With this version, the algorithm is able to improve the image without being stuck. Now, the algorithm is able to recreate the image with a precision of 1 pixel.
