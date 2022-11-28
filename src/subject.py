@@ -18,10 +18,10 @@ class subject():
     def getImage(self) -> Image:
         return self.image
 
-    def drawPolygon(self, nbPolygon:int=-1) -> None:
+    def drawPolygon(self, nbPolygon:int=-1, subdivise:int=8) -> None:
         if nbPolygon == -1:
             nbPolygon = random.randint(3, 6)
-        region = (int(self.size[0] / 8), int(self.size[1] / 8))
+        region = (int(self.size[0] / subdivise), int(self.size[1] / subdivise))
         for _ in range(nbPolygon):
             nbPoints = random.randint(3, 6)
             pos = (random.randint(0, self.size[0]), random.randint(0, self.size[1]))
