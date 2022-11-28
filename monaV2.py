@@ -72,8 +72,6 @@ class generation:
         print("Fitness:", fitness, end="\t")
         if self.lastFitness == fitness:
             self.stuck += 1
-            # if self.stuck > 100:
-            #     self.stuck = 10
         else:
             self.lastFitness = fitness
             self.stuck -= 1
