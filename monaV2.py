@@ -3,6 +3,8 @@ import random
 import numpy as np
 import sys
 from src.subject import subject
+import os
+import re
 
 class generation:
     def __init__(self, image):
@@ -66,11 +68,11 @@ class generation:
             parent.getImage().save("res.png")
             exit(0)
         elif (x % 5 == 0):
-            parent.getImage().save("step/generation"+ str(x) + ".png")
+            parent.getImage().save(f'step/generation{x:05d}.png')
     
     def equilibrate(self, fitness:float) -> None:
         print("Fitness:", fitness, end="\t")
-        if self.lastFitness == fitness:
+        if self.lastFitness == fitness and self.stuck < 200:
             self.stuck += 1
         else:
             self.lastFitness = fitness
@@ -79,9 +81,10 @@ class generation:
                 self.stuck = 1
         print("Stuck:", self.stuck)
 
-    def main(self, nbGeneration:int) -> None:
+    def main(self, nbGeneration:int, start=0) -> None:
         print("Starting Generation")
-        for x in range(nbGeneration):
+        nbGeneration += start
+        for x in range(start, nbGeneration):
             print("Generation: " + str(x + 1) + '/' + str(nbGeneration), end="\t")
             sortedPopulation = self.fitness()
             self.equilibrate(sortedPopulation[0].getFitness())
@@ -89,6 +92,18 @@ class generation:
             self.population = sortedPopulation[:self.nbSubject]
             self.crossover(sortedPopulation[0])
             self.mutation()
+
+
+def get_previous_number():
+    files = os.listdir('step')
+        
+    def extract_number(f):
+        s = re.findall(r'\d+', f)
+        return (int(s[0]) if s else 0, f)
+    
+    last = max(files,key=extract_number)
+    print(f'Last: {last}')
+    return extract_number(last)[0]
 
 args = sys.argv
 
@@ -99,7 +114,7 @@ if len(args) == 4:
 elif len(args) == 5:
     gen = generation(args[1])
     gen.create_population(int(args[2]), args[4])
-    gen.main(int(args[3]))
+    gen.main(int(args[3]), start=get_previous_number())
 else:
     print("Usage: python mona.py [image] [nbSubject] [nbGeneration]")
     print("\tExample: python mona.py image.png 100 500\n")

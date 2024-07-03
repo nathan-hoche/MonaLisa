@@ -1,7 +1,7 @@
 import random
 from PIL import Image, ImageDraw
 import numpy as np
-import colour
+from skimage.color import deltaE_cie76
 
 def getRandomColor() -> None:
     return (random.randint(0, 255), random.randint(0, 255), random.randint(0, 255))
@@ -34,5 +34,5 @@ class subject():
 
     def getFitness(self, targetImage=None) -> float:
         if (self.fitness == -1):
-            self.fitness = np.mean(colour.delta_E(self.imgArray, targetImage, method='CIE1976'))
+            self.fitness = np.mean(deltaE_cie76(self.imgArray, targetImage))
         return self.fitness

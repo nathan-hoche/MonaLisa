@@ -1,3 +1,3 @@
-colour-science
+scikit-image
 pillow
 numpy

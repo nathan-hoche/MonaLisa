@@ -54,3 +54,14 @@ And for the result on 5000 generations:
 | <img src="img/logo/logo.png" width="200"/> | <img src="img/logo/res2-5000.png" width="200"/> |
 
 With this version, the algorithm is able to improve the image without being stuck. Now, the algorithm is able to recreate the image with a precision of 1 pixel.
+
+# Gif Result:
+
+| | Monalisa | Logo |
+|-|----------|------|
+|Number of step|10000|10000|
+|Result|<img src="gif/mona-60fps.gif" width="200"/>|<img src="gif/logo-60fps.gif" width="200"/>|
+
+
+> [!TIP]
+> You can convert the image in mp4 via: `ffmpeg -framerate 60 -pattern_type glob -i 'step/generation*.png' -c:v libx264 -pix_fmt yuv422p output-60fps.mp4`
