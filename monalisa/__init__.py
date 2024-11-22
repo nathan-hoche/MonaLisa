@@ -1,10 +1,12 @@
-from PIL import Image
-import random
-import numpy as np
-import sys
-from src.subject import subject
 import os
+import random
 import re
+import sys
+
+import numpy as np
+from PIL import Image
+
+from monalisa.subject import subject
 
 class generation:
     def __init__(self, image):
@@ -105,19 +107,25 @@ def get_previous_number():
     print(f'Last: {last}')
     return extract_number(last)[0]
 
-args = sys.argv
 
-if len(args) == 4:
-    gen = generation(args[1])
-    gen.create_population(int(args[2]))
-    gen.main(int(args[3]))
-elif len(args) == 5:
-    gen = generation(args[1])
-    gen.create_population(int(args[2]), args[4])
-    gen.main(int(args[3]), start=get_previous_number())
-else:
-    print("Usage: python mona.py [image] [nbSubject] [nbGeneration]")
-    print("\tExample: python mona.py image.png 100 500\n")
-    print("In case you want to load a previous generation:")
-    print("Usage: python mona.py [image] [nbSubject] [nbGeneration] [load]")
-    print("\tExample: python mona.py image.png 100 500 load.png")
+def main():
+    args = sys.argv
+
+    if len(args) == 4:
+        gen = generation(args[1])
+        gen.create_population(int(args[2]))
+        gen.main(int(args[3]))
+    elif len(args) == 5:
+        gen = generation(args[1])
+        gen.create_population(int(args[2]), args[4])
+        gen.main(int(args[3]), start=get_previous_number())
+    else:
+        print("Usage: python mona.py [image] [nbSubject] [nbGeneration]")
+        print("\tExample: python mona.py image.png 100 500\n")
+        print("In case you want to load a previous generation:")
+        print("Usage: python mona.py [image] [nbSubject] [nbGeneration] [load]")
+        print("\tExample: python mona.py image.png 100 500 load.png")
+
+
+if __name__ == "__main__":
+    main()
