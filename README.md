@@ -12,7 +12,7 @@ This project is a simple implementation of a genetic algorithm to recreate an im
 $ git clone https://github.com/nathan-hoche/MonaLisa
 $ cd MonaLisa
 $ pip install .
-$ monalisa args1 args2 args3 args4
+$ monalisa <imgObjectifPath> <nbSubject> <nbGeneration> [imgTemporaryPath]
 ```
 
 or:
@@ -20,8 +20,19 @@ or:
 ```
 $ git clone https://github.com/nathan-hoche/MonaLisa
 $ cd MonaLisa
-$ tox -e venv -- monalisa args1 args2 args3 args4
+$ tox -e venv -- monalisa <imgObjectifPath> <nbSubject> <nbGeneration> [imgTemporaryPath]
 ```
+
+with:
+- **imgObjectifPath** (str) : Being the objectif of the generation.
+- **nbSubject** (int: 0-inf) : Being the number of individuals used in each generation.
+- **nbGeneration** (int: 0-inf): Being the total of generation.
+- **imgTemporaryPath** (optional, str): Used to continue a previous launch, the argument is the previous result image. 
+
+<br>
+
+> [!NOTE]  
+> More the number of Subject or/and Generation is huge, more it's computationally expensive. But a too low number of Subject or/and Generation will reduce the capability of the program. A total of 100 subjects and 500 Generations can be a good base to start.
 
 ## First Version
 This version is based on this [paper](https://medium.com/@sebastian.y.charmot/genetic-algorithm-for-image-recreation-4ca546454aaa) by Sebastian Charmot.
