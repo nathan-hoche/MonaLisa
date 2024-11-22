@@ -3,6 +3,8 @@ name: Main workflow
 on: [push, pull_request]
 
 jobs:
+  permissions:
+    id-token: write
   tests:
     name: Tests & Checks
     runs-on: ubuntu-latest
