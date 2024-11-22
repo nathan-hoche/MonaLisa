@@ -6,6 +6,23 @@ This project is a simple implementation of a genetic algorithm to recreate an im
 
 > For more information about genetic algorithms, see [Genetic Algorithms](https://en.wikipedia.org/wiki/Genetic_algorithm).
 
+## Usage
+
+```
+$ git clone https://github.com/nathan-hoche/MonaLisa
+$ cd MonaLisa
+$ pip install .
+$ monalisa args1 args2 args3 args4
+```
+
+or:
+
+```
+$ git clone https://github.com/nathan-hoche/MonaLisa
+$ cd MonaLisa
+$ tox -e venv -- monalisa args1 args2 args3 args4
+```
+
 ## First Version
 This version is based on this [paper](https://medium.com/@sebastian.y.charmot/genetic-algorithm-for-image-recreation-4ca546454aaa) by Sebastian Charmot.
 
