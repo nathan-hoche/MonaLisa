@@ -1,5 +1,12 @@
 # MonaLisa - Image recreation using genetic algorithms
 
+![Build](https://github.com/nathan-hoche/MonaLisa/actions/workflows/python-app.yml/badge.svg)
+![PyPI](https://img.shields.io/pypi/v/monalisa.svg)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/monalisa.svg)
+![PyPI - Status](https://img.shields.io/pypi/status/monalisa.svg)
+[![Downloads](https://pepy.tech/badge/monalisa)](https://pepy.tech/project/monalisa)
+[![Downloads](https://pepy.tech/badge/monalisa/month)](https://pepy.tech/project/monalisa/month)
+
 ## Introduction
 
 This project is a simple implementation of a genetic algorithm to recreate an image using polygons.
@@ -27,11 +34,11 @@ with:
 - **imgObjectifPath** (str) : Being the objectif of the generation.
 - **nbSubject** (int: 0-inf) : Being the number of individuals used in each generation.
 - **nbGeneration** (int: 0-inf): Being the total of generation.
-- **imgTemporaryPath** (optional, str): Used to continue a previous launch, the argument is the previous result image. 
+- **imgTemporaryPath** (optional, str): Used to continue a previous launch, the argument is the previous result image.
 
 <br>
 
-> [!NOTE]  
+> [!NOTE]
 > More the number of Subject or/and Generation is huge, more it's computationally expensive. But a too low number of Subject or/and Generation will reduce the capability of the program. A total of 100 subjects and 500 Generations can be a good base to start.
 
 ## First Version
