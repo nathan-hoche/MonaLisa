@@ -6,7 +6,7 @@ requires = [
 build-backend = "hatchling.build"
 
 [project]
-name = "monlisa-ai"
+name = "monlisa"
 authors = [
     {name = "Nathan Hoche", email = "hochenat@gmail.com"},
 ]
