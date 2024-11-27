@@ -6,7 +6,7 @@ requires = [
 build-backend = "hatchling.build"
 
 [project]
-name = "monalisa-ai"
+name = "monailisa"
 authors = [
     {name = "Nathan Hoche", email = "hochenat@gmail.com"},
 ]
@@ -43,10 +43,10 @@ dependencies = [
 dev = ["black", "isort", "pip-tools", "build", "twine", "pre-commit", "commitizen"]
 
 [project.scripts]
-monalisa = "monalisa.__init__:main"
+monailisa = "monailisa.__init__:main"
 
 [options.packages.find]
-where = "monalisa"
+where = "monailisa"
 exclude = "tests*"
 
 [tool.hatch]

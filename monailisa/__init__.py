@@ -6,7 +6,7 @@ import sys
 import numpy as np
 from PIL import Image
 
-from monalisa.subject import subject
+from monailisa.subject import subject
 
 
 class generation:
