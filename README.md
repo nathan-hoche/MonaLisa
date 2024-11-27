@@ -13,21 +13,20 @@ This project is a simple implementation of a genetic algorithm to recreate an im
 
 > For more information about genetic algorithms, see [Genetic Algorithms](https://en.wikipedia.org/wiki/Genetic_algorithm).
 
+## Install
+
+The installation can be done via:
+
+```
+pip install monailisa
+```
+
 ## Usage
 
-```
-$ git clone https://github.com/nathan-hoche/MonaLisa
-$ cd MonaLisa
-$ pip install .
-$ monalisa <imgObjectifPath> <nbSubject> <nbGeneration> [imgTemporaryPath]
-```
-
-or:
+Once, the package is download via pip, you can use via:
 
 ```
-$ git clone https://github.com/nathan-hoche/MonaLisa
-$ cd MonaLisa
-$ tox -e venv -- monalisa <imgObjectifPath> <nbSubject> <nbGeneration> [imgTemporaryPath]
+monailisa <imgObjectifPath> <nbSubject> <nbGeneration> [imgTemporaryPath]
 ```
 
 with:
@@ -35,6 +34,17 @@ with:
 - **nbSubject** (int: 0-inf) : Being the number of individuals used in each generation.
 - **nbGeneration** (int: 0-inf): Being the total of generation.
 - **imgTemporaryPath** (optional, str): Used to continue a previous launch, the argument is the previous result image.
+
+<br>
+
+***Alternative:***
+
+Also, you can use tox to test the program in a venv via the repository:
+```
+$ git clone https://github.com/nathan-hoche/MonaLisa
+$ cd MonaLisa
+$ tox -e venv -- monailisa <imgObjectifPath> <nbSubject> <nbGeneration> [imgTemporaryPath]
+```
 
 <br>
 
@@ -55,11 +65,11 @@ The first version of the algorithme is based on the following steps:
 The result of this different steps are shown below.
 | image | 485 generations | 1000 generations |
 | --- | --- | --- |
-| <img src="img/mona-lisa/mona.png" width="200"/> | <img src="img/mona-lisa/generation485.png" width="200"/> | <img src="img/mona-lisa/mona-lisa-1220.png" width="200"/> |
+| <img src="https://raw.githubusercontent.com/nathan-hoche/MonaLisa/refs/heads/main/img/mona-lisa/mona.png" width="200"/> | <img src="https://raw.githubusercontent.com/nathan-hoche/MonaLisa/refs/heads/main/img/mona-lisa/generation485.png" width="200"/> | <img src="https://raw.githubusercontent.com/nathan-hoche/MonaLisa/refs/heads/main/img/mona-lisa/mona-lisa-1220.png" width="200"/> |
 
 | image | 500 generations |
 | --- | --- |
-| <img src="img/nuit-etoilee/nuit-etoilee.png" width="300"/> | <img src="img/nuit-etoilee/nuit-etoilee-500.png" width="300"/>
+| <img src="https://raw.githubusercontent.com/nathan-hoche/MonaLisa/refs/heads/main/img/nuit-etoilee/nuit-etoilee.png" width="300"/> | <img src="https://raw.githubusercontent.com/nathan-hoche/MonaLisa/refs/heads/main/img/nuit-etoilee/nuit-etoilee-500.png" width="300"/>
 
 But After the 1000th generation, the algorithm has a low probability to improve the image anymore, due to the size of the polygons. The algorithm is stuck in a local minimum.
 
@@ -76,17 +86,17 @@ The main problem of the first version is the precision of the polygons. As the p
 
 | image | 200 generations | 1000 generations | 2000 generations | 3000 generations | 4000 generations | 5000 generations |
 | --- | --- | --- | --- | --- | --- | --- |
-| <img src="img/logo/logo.png"/> | <img src="img/logo/res2-200.png" width="200"/> | <img src="img/logo/res2-1000.png" width="200"/> |<img src="img/logo/res2-2000.png" width="200"/> | <img src="img/logo/res2-3000.png" width="200"/> | <img src="img/logo/res2-4000.png" width="200"/> | <img src="img/logo/res2-5000.png" width="200"/> |
+| <img src="https://raw.githubusercontent.com/nathan-hoche/MonaLisa/refs/heads/main/img/logo/logo.png"/> | <img src="https://raw.githubusercontent.com/nathan-hoche/MonaLisa/refs/heads/main/img/logo/res2-200.png" width="200"/> | <img src="https://raw.githubusercontent.com/nathan-hoche/MonaLisa/refs/heads/main/img/logo/res2-1000.png" width="200"/> |<img src="img/logo/res2-2000.png" width="200"/> | <img src="https://raw.githubusercontent.com/nathan-hoche/MonaLisa/refs/heads/main/img/logo/res2-3000.png" width="200"/> | <img src="https://raw.githubusercontent.com/nathan-hoche/MonaLisa/refs/heads/main/img/logo/res2-4000.png" width="200"/> | <img src="https://raw.githubusercontent.com/nathan-hoche/MonaLisa/refs/heads/main/img/logo/res2-5000.png" width="200"/> |
 
 In comparison with the first version:
 | First version | Second version |
 | --- | --- |
-| <img src="img/logo/logo-1000.png" width="200"/> | <img src="img/logo/res2-1000.png" width="200"/> |
+| <img src="https://raw.githubusercontent.com/nathan-hoche/MonaLisa/refs/heads/main/img/logo/logo-1000.png" width="200"/> | <img src="https://raw.githubusercontent.com/nathan-hoche/MonaLisa/refs/heads/main/img/logo/res2-1000.png" width="200"/> |
 
 And for the result on 5000 generations:
 | Objectif | Result |
 | --- | --- |
-| <img src="img/logo/logo.png" width="200"/> | <img src="img/logo/res2-5000.png" width="200"/> |
+| <img src="https://raw.githubusercontent.com/nathan-hoche/MonaLisa/refs/heads/main/img/logo/logo.png" width="200"/> | <img src="https://raw.githubusercontent.com/nathan-hoche/MonaLisa/refs/heads/main/img/logo/res2-5000.png" width="200"/> |
 
 With this version, the algorithm is able to improve the image without being stuck. Now, the algorithm is able to recreate the image with a precision of 1 pixel.
 
@@ -95,7 +105,7 @@ With this version, the algorithm is able to improve the image without being stuc
 | | Monalisa | Logo |
 |-|----------|------|
 |Number of step|10000|10000|
-|Result|<img src="gif/mona-60fps.gif" width="200"/>|<img src="gif/logo-60fps.gif" width="200"/>|
+|Result|<img src="https://raw.githubusercontent.com/nathan-hoche/MonaLisa/refs/heads/main/gif/mona-60fps.gif" width="200"/>|<img src="https://raw.githubusercontent.com/nathan-hoche/MonaLisa/refs/heads/main/gif/logo-60fps.gif" width="200"/>|
 
 
 > [!TIP]
