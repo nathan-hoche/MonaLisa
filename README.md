@@ -1,11 +1,11 @@
 # MonaLisa - Image recreation using genetic algorithms
 
-![Build](https://github.com/nathan-hoche/MonaLisa/actions/workflows/python-app.yml/badge.svg)
-![PyPI](https://img.shields.io/pypi/v/monalisa.svg)
-![PyPI - Python Version](https://img.shields.io/pypi/pyversions/monalisa.svg)
-![PyPI - Status](https://img.shields.io/pypi/status/monalisa.svg)
-[![Downloads](https://pepy.tech/badge/monalisa)](https://pepy.tech/project/monalisa)
-[![Downloads](https://pepy.tech/badge/monalisa/month)](https://pepy.tech/project/monalisa/month)
+![Build](https://github.com/nathan-hoche/MonaLisa/actions/workflows/main.yml/badge.svg)
+![PyPI](https://img.shields.io/pypi/v/monailisa.svg)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/monailisa.svg)
+![PyPI - Status](https://img.shields.io/pypi/status/monailisa.svg)
+[![Downloads](https://pepy.tech/badge/monailisa)](https://pepy.tech/project/monailisa)
+[![Downloads](https://pepy.tech/badge/monailisa/month)](https://pepy.tech/project/monailisa/month)
 
 ## Introduction
 
